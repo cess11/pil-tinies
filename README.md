@@ -8,10 +8,15 @@ These are a few 'call' based functions for some control over the Linux music pla
 Usage would be along the lines
 
 `(load "db-controls.l")`
+
 `(db-play)`
+
 starting deadbeef 0.7.2
+
 `(dbi)`
+
 `random`
+
 starting deadbeef 0.7.2`
 
 
