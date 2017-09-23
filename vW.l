@@ -3,7 +3,7 @@
 # It is quite convenient sometimes. 
 
 # Dependencies would be picolisp and w3m. 
-# It has been tested in debug mode. 
+# It has been tested in debug mode. Actually, it requires debug mode. 
 # picolisp is the creation of Alex Burger: www.picolisp.com 
 
 
