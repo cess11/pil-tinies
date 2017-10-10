@@ -8,7 +8,7 @@
 # First you write a data model for the data involved 
 # In this case it is ;-delimited and has six columns
 
-(class +Kommun +Entity) # In swedish a kommun is a region or county
+(class +Kommun +Entity) # In Sweden a kommun is a region or county
 (rel kk (+Ref +Key +Number)) # They have number codes
 (rel nm (+Sn +Idx +String)) # Also names that you probably want to search for
 (rel prm (+Ref +Bool)) # If it is T here it is a county in a region, and if NIL a region
@@ -17,12 +17,6 @@
 (rel epst (+Ref +String)) # Email address
 (rel tel (+Ref +String)) # Telephone number
 (rel dor (+String)) # Date of registry in your DB
-
-# It is probably useful to be able to output the data as ;-delimited CSV again
-# Usage: '(for X (collect 'kk '+Kommun) (mkCSV X "freshfile")), or row by row, '(mkCSV 'Obj "file")
-(dm mkCSV> (Dst) 
-        (out (pack "+" Dst) # Because one usually enters just a file name
-                (prinl (glue ";" (list (: kk) (: nm) (: bef) (: webb) (: epst) (: tel) ]
 
 # And we also want a function for parsing and modeling the incoming data
 (de newK (Ls) # Lists are what LISPs are for
@@ -71,3 +65,9 @@
 
 
 # Nevermind the DOS format or weird encoding, that's how the powerful do data over here
+
+# Here's a method for writing it back out as ;-delimited CSV 
+# Usage: '(for X (collect 'kk '+Kommun) (mkCSV X "freshfile")), or row by row, '(mkCSV 'Obj "file")
+(dm mkCSV> (Dst) 
+        (out (pack "+" Dst) # Because one usually enters just a file name
+                (prinl (glue ";" (list (: kk) (: nm) (: bef) (: webb) (: epst) (: tel) ]
