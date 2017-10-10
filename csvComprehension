@@ -20,7 +20,7 @@
 
 # It is probably useful to be able to output the data as ;-delimited CSV again
 # Usage: '(for X (collect 'kk '+Kommun) (mkCSV X "freshfile")), or row by row, '(mkCSV 'Obj "file")
-(dm mkCSV (Dst) 
+(dm mkCSV> (Dst) 
         (out (pack "+" Dst) # Because one usually enters just a file name
                 (prinl (glue ";" (list (: kk) (: nm) (: bef) (: webb) (: epst) (: tel) ]
 
@@ -58,12 +58,12 @@
   (in '(w3m "https://catalog.skl.se/store/1/resource/169")
     (line) # Because the first line isn't interesting 
     (until (eof)
-      (nyK (mapcar pack (split (line) ";"))))) # 'mapcar returns a list of packed transient symbols
+      (newK (mapcar pack (split (line) ";"))))) # 'mapcar returns a list of packed transient symbols
   (setq *RegionIfNIL 'T)
   (in '(w3m "https://catalog.skl.se/store/1/resource/173")
     (line)
     (until (eof)
-      (nyK (mapcar pack (split (line) ";"))))) )
+      (newK (mapcar pack (split (line) ";"))))) )
 
 # Now you have all the addresses and phone numbers of all the swedish political assemblies 
 # Next one could write a parser for that first line that sets up a model and 'load it
