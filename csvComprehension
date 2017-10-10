@@ -67,7 +67,7 @@
 # Nevermind the DOS format or weird encoding, that's how the powerful do data over here
 
 # Here's a method for writing it back out as ;-delimited CSV 
-# Usage: '(for X (collect 'kk '+Kommun) (mkCSV X "freshfile")), or row by row, '(mkCSV 'Obj "file")
+# Usage: '(for X (collect 'kk '+Kommun) (mkCSV> X "freshfile")), or row by row, '(mkCSV> 'Obj "file")
 (dm mkCSV> (Dst) 
         (out (pack "+" Dst) # Because one usually enters just a file name
                 (prinl (glue ";" (list (: kk) (: nm) (: bef) (: webb) (: epst) (: tel) ]
