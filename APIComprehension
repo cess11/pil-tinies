@@ -1,5 +1,6 @@
 # For this you probably want a json.l, for example https://rosettacode.org/wiki/JSON#PicoLisp
 (load "json.l")
+# It needs 'curl or 'w3m as well. 
 # This is a small framework for interactively querying API:s. 
 # You will need to sort out your own presentation of the collected data. 
 
