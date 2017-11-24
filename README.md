@@ -30,3 +30,14 @@ See https://software-lab.de/doc/refM.html#more for more information.
 One simply feeds 'vW an URL and it will send that to w3m which returns the text it finds at the linked resource, in turn that is passed on to 'more. It could easily be modified to output the web data into another function or file instead. 
 
 --------------------------------------------------------
+csvComprehension.l:
+
+Quick and dirty CSV-import-export utility and tutorial. It uses data over Swedish political administrations from an open data archive as example data. 
+
+Can easily be modified to chug through just about any CSV, TSV or other row-based dataformat. 
+
+---------------------------------------------------------
+APIComprehension.l
+
+Quick and dirty API-query framework that reads data into pilDB objects. Could easily be extended into a caching system for such API-queries or used as a backend for presenting the responses. 
+
