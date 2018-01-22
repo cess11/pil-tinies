@@ -41,3 +41,8 @@ APIComprehension.l
 
 Quick and dirty API-query framework that reads data into pilDB objects. Could easily be extended into a caching system for such API-queries or used as a backend for presenting the responses. 
 
+---------------------------------------------------------
+nmap.l 
+
+Extremely basic interface to nmap for saving scan results. 
+TODO: Better result parsing and an ontology/pil classes for conf. 
