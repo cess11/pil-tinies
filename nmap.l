@@ -11,7 +11,12 @@
 (rel cnf (+List +String))
 (rel rslt (+List +Joint) prj (+Rslt))
 
-(dm dorun> () (=: rslt (cons (new! '(+Rslt) 'nm (pack (: cnf) " " (: hst)) 'bdy (make (in (list "nmap" (if (: cnf)(: cnf)) (: hst)) (until (eof)(link (line T)))))) (: rslt))))
+(dm dorun> () (=: rslt 
+  (cons 
+    (new! '(+Rslt) 
+      'nm (pack (: cnf) " " (: hst)) 
+      'bdy (make (in (list "nmap" (if (: cnf)(: cnf)) (: hst)) (until (eof)(link (line T)))))) 
+    (: rslt))))
 
 (de newHost (Hst Cnf) (new! '(+PScan) 'hst Hst 'cnf Cnf)) 
 
