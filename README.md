@@ -53,3 +53,9 @@ gub.l
 The source code for https://dev.to/cess11/lets-build-a-picolisp-guestbook-mkl . 
 
 To run it you open the database and create a new '+Gbk object, then you run 'go and visit localhost:8080. 
+
+----------------------------------------------------------
+ns.l
+Sometimes it's useful to gather nameservers for domains. ns.l does this by consuming a file with domains called domains. 
+
+It then does a lookup with the *nix host command and prints the results to a file called result. It is trivial to adapt it to use variable file names or to put the lookup into 'task, 'fork or 'co environments for parallellisation. 
